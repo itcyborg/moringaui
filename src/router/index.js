@@ -1,5 +1,14 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
+import ProjectsView from "../views/ProjectsView.vue";
+import ProjectsEditView from "../views/ProjectsEditView.vue";
+import ProjectsCreateView from "../views/ProjectsCreateView.vue";
+import IssuesEditView from "../views/IssuesEditView.vue";
+import IssuesView from "../views/IssuesView.vue";
+import IssuesCreateView from "../views/IssuesCreateView.vue";
+import LogsView from "../views/LogsView.vue";
+import LogsCreateView from "../views/LogsCreateView.vue";
+import LogsEditView from "../views/LogsEditView.vue";
 
 const routes = [
   {
@@ -8,13 +17,49 @@ const routes = [
     component: HomeView,
   },
   {
-    path: "/about",
-    name: "about",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
+    path: "/projects",
+    name: "projects",
+    component: ProjectsView,
+  },
+  {
+    path: "/project/edit/:project",
+    name: "projects-view",
+    component: ProjectsEditView,
+  },
+  {
+    path: "/project/create",
+    name: "projects-crete",
+    component: ProjectsCreateView,
+  },
+  {
+    path: "/issues",
+    name: "issues",
+    component: IssuesView,
+  },
+  {
+    path: "/issue/edit/:issue",
+    name: "issue-view",
+    component: IssuesEditView,
+  },
+  {
+    path: "/issue/create",
+    name: "issue-create",
+    component: IssuesCreateView,
+  },
+  {
+    path: "/logs",
+    name: "logs",
+    component: LogsView,
+  },
+  {
+    path: "/log/edit/:log",
+    name: "log-view",
+    component: LogsEditView,
+  },
+  {
+    path: "/log/create",
+    name: "log-create",
+    component: LogsCreateView,
   },
 ];
 
