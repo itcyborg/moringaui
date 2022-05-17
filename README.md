@@ -1,5 +1,7 @@
 # moringa-client
 
+This is a frontend interface used to access the backend at [https://github.com/itcyborg/moringaschool]. The two should be run simultaneously
+
 ## Project setup
 ```
 npm install
